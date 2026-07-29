@@ -1,0 +1,21 @@
+# Credentials y tokens (NUNCA commitear)
+credentials.json
+token.pickle
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Output data
+data/
+output/
