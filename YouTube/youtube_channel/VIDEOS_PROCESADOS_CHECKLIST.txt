@@ -1,0 +1,80 @@
+================================================================================
+✅ VIDEOS YA PROCESADOS - CHECKLIST RÁPIDO
+================================================================================
+
+FECHA: 2026-07-29
+FUENTE VALIDADA: TODOS_LOS_VIDEOS_CON_LINKS.md (50 videos)
+TOTAL PROCESADOS: 6/50 videos
+PROGRESO: 12% completado
+
+================================================================================
+✅ TRANSCRIPTOS EXITOSOS (6) - NO REINTENTAR
+================================================================================
+
+[✅] 02 - u-RlV46QSJY - Crear una Landing Page con IA
+[✅] 05 - dPIsXv0XhP4 - Cómo CLAUDE reemplazó las agencias de publicidad
+[✅] 07 - e60pnu3gWJg - No pagues API GoHighLevel GRATIS
+[✅] 08 - rfrrgZvMIyg - Conecta WhatsApp con EVOLUTION + n8n
+[✅] 09 - yszNJOH95zI - Crea PROMPTS DE VENTAS para Agente IA
+[✅] 10 - VkpqLBORxOM - Agentes vendedores IA para facturar US$800
+
+ARCHIVOS: videos de youtube/transcripciones_top_videos/
+AUDIOS: videos de youtube/audio_mp3/
+
+================================================================================
+⏭️ SALTADOS AUTOMÁTICAMENTE (3) - SIN REINTENTAR
+================================================================================
+
+[⏭️] 01 - wizX-zWiWio - Livestream no disponible
+[⏭️] 04 - GrXbXPMF8Xc - Video privado
+[⏭️] 06 - 9M5utoPygFk - Muy corto (5 seg)
+
+RAZÓN: Anomalías detectadas. Requieren --incluir-anomalias para forzar.
+
+================================================================================
+❌ CON ERROR (1) - REINTENTAR PRÓXIMA VEZ
+================================================================================
+
+[❌] 03 - pQo--gSE9e4 - n8n GRATIS (HTTP 403 - descarga)
+
+NOTA: Se reintentará automáticamente en próxima ejecución con --all
+
+================================================================================
+📊 RESUMEN
+================================================================================
+
+Total videos del canal: 50
+Ya procesados: 6 (✅✅✅✅✅✅)
+Saltados: 3 (⏭️⏭️⏭️)
+Con error: 1 (❌)
+PENDIENTES: 40 (⏳⏳⏳⏳...)
+
+================================================================================
+🚀 PRÓXIMO COMANDO
+================================================================================
+
+cd youtube_channel
+python descargar_y_transcribir_audio.py --all
+
+RESULTADO ESPERADO:
+- Saltará automáticamente los 6 ya transcritos
+- Procesará los 40 pendientes
+- Reintentará el 1 con error
+- Seguirá saltando los 3 anómalos
+
+TIEMPO: 5-7 horas
+
+================================================================================
+✅ VERIFICAR ANTES DE EJECUTAR
+================================================================================
+
+[ ] Archivos en transcripciones_top_videos/: ✅ 6 archivos .md
+[ ] Archivos en audio_mp3/: ✅ 6 archivos .mp3
+[ ] Espacio en disco: ~200 MB disponibles
+[ ] Tiempo disponible: 5-7 horas (puede ser de noche)
+
+================================================================================
+
+ACTUALIZAR ESTE ARCHIVO: Cuando terminen los 50 videos (próxima ejecución)
+
+================================================================================
