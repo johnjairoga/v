@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+        :root {
+            --anthropic-bg: #1a5f5f;
+            --anthropic-dark: #FFFFFF;
+            --anthropic-accent: #7DD3C0;
+            --anthropic-muted: #C5E8E3;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #111;
+        }
+        .slide-container { scroll-snap-type: x mandatory; scrollbar-width: none; }
+        .slide-container::-webkit-scrollbar { display: none; }
+        .slide {
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            width: 1080px;
+            height: 1350px;
+        }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .gradient-text {
+            background: linear-gradient(135deg, #7DD3C0 0%, #C5E8E3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p, h1, h2, h3, span { text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); }
+        .blob-1 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle at 30% 50%, rgba(125, 211, 192, 0.3), transparent 50%);
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            filter: blur(40px);
+            pointer-events: none;
+        }
+        .blob-2 {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle at 70% 70%, rgba(197, 232, 227, 0.25), transparent 50%);
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            filter: blur(30px);
+            pointer-events: none;
+        }
+        .grid-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(0deg, transparent 24%, rgba(125, 211, 192, 0.05) 25%, rgba(125, 211, 192, 0.05) 26%, transparent 27%, transparent 74%, rgba(125, 211, 192, 0.05) 75%, rgba(125, 211, 192, 0.05) 76%, transparent 77%, transparent),
+                linear-gradient(90deg, transparent 24%, rgba(125, 211, 192, 0.05) 25%, rgba(125, 211, 192, 0.05) 26%, transparent 27%, transparent 74%, rgba(125, 211, 192, 0.05) 75%, rgba(125, 211, 192, 0.05) 76%, transparent 77%, transparent);
+            background-size: 50px 50px;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex items-center justify-center py-20">
+        <div class="relative max-w-full overflow-hidden">
+            <div class="slide-container flex overflow-x-auto gap-8 px-[calc(50vw-540px)]">
+
+                <!-- SLIDE 1: HOOK -->
+                <div class="slide relative bg-[#1a5f5f] text-[#FFFFFF] flex flex-col p-20 overflow-hidden shadow-2xl rounded-3xl">
+                    <div class="mb-auto flex items-center gap-3">
+                        <div class="w-12 h-12 bg-[#FFFFFF] rounded-xl flex items-center justify-center">
+                            <iconify-icon icon="lucide:lightbulb" class="text-2xl text-[#1a5f5f]"></iconify-icon>
+                        </div>
+                        <span class="font-medium tracking-widest text-sm uppercase">Mi Descubrimiento</span>
+                    </div>
+                    <div class="relative">
+                        <h1 class="text-[110px] font-bold leading-[0.9] tracking-tighter mb-8">
+                            Descubrí<br><span class="gradient-text">la fórmula</span>
+                        </h1>
+                        <p class="text-3xl text-[#C5E8E3] max-w-xl font-light leading-relaxed">
+                            Cómo crear landing pages que mis clientes pagan $1000 sin saber programar.
+                        </p>
+                    </div>
+                    <div class="mt-auto flex items-center justify-between">
+                        <div class="flex flex-col">
+                            <span class="text-sm text-[#FFFFFF]">Desliza →</span>
+                            <div class="flex gap-1 mt-2">
+                                <div class="w-8 h-1 bg-[#7DD3C0] rounded-full"></div>
+                                <div class="w-4 h-1 bg-gray-300 rounded-full"></div>
+                                <div class="w-4 h-1 bg-gray-300 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 2 -->
+                <div class="slide relative bg-gradient-to-br from-[#F8FFFE] to-[#E8F5F2] text-[#1a5f5f] flex flex-col items-center justify-center p-20 shadow-2xl rounded-3xl overflow-hidden">
+                    <div class="blob-2 -top-20 -right-20"></div>
+                    <div class="blob-1 -bottom-32 -left-20"></div>
+                    <div class="grid-pattern"></div>
+                    <div class="absolute bottom-8 right-8 w-32 h-32 opacity-10 pointer-events-none">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <path d="M 50 60 L 90 60 L 90 100 Q 90 120 70 120 L 50 120 Z" fill="#1a5f5f" stroke="#1a5f5f" stroke-width="2"/>
+                            <path d="M 110 60 L 150 60 Q 150 80 130 80 L 110 80 L 110 140 L 130 140 Q 150 140 150 120" fill="#1a5f5f" stroke="#1a5f5f" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center justify-center gap-8 w-full max-w-2xl">
+                        <div class="text-center">
+                            <div class="text-7xl font-black mb-6">😕</div>
+                            <h2 class="text-5xl font-bold mb-8 tracking-tight">Primero: El Problema</h2>
+                            <p class="text-2xl leading-relaxed">Veía freelancers en Fiverr ganando $1000 por landing pages. Yo no sabía programar.</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-[#1a5f5f] to-[#0f4d4d] p-6 rounded-2xl w-full">
+                            <p class="mono text-[#7DD3C0] mb-3 text-sm font-semibold">🤔 Mi pregunta</p>
+                            <p class="text-lg text-[#C5E8E3]">"¿Cómo lo hacen sin código?"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 3 -->
+                <div class="slide relative bg-gradient-to-br from-[#1a5f5f] via-[#2d7a7a] to-[#0f4d4d] text-[#FFFFFF] flex flex-col items-center justify-center p-20 shadow-2xl rounded-3xl overflow-hidden">
+                    <div class="blob-1 -top-40 -right-40 opacity-20"></div>
+                    <div class="grid-pattern opacity-20"></div>
+                    <div class="absolute bottom-8 right-8 w-32 h-32 opacity-10 pointer-events-none">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <path d="M 50 60 L 90 60 L 90 100 Q 90 120 70 120 L 50 120 Z" fill="#7DD3C0" stroke="#7DD3C0" stroke-width="2"/>
+                            <path d="M 110 60 L 150 60 Q 150 80 130 80 L 110 80 L 110 140 L 130 140 Q 150 140 150 120" fill="#7DD3C0" stroke="#7DD3C0" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center justify-center gap-8 w-full max-w-2xl">
+                        <div class="text-center">
+                            <div class="text-7xl font-black mb-6">💡</div>
+                            <h2 class="text-5xl font-bold mb-8 tracking-tight">Luego: La Epifanía</h2>
+                            <p class="text-2xl text-[#C5E8E3] leading-relaxed">Descubrí Google AI Studio. Subí un video de una landing page. Y la IA lo entendió TODO.</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl w-full">
+                            <p class="mono text-sm text-[#BEF264] font-semibold text-center">→ 5 minutos. Un video. Una IA que entiende TODO.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 4 -->
+                <div class="slide relative bg-gradient-to-br from-[#F8FFFE] to-[#E8F5F2] text-[#1a5f5f] flex flex-col items-center justify-center p-20 shadow-2xl rounded-3xl overflow-hidden">
+                    <div class="blob-1 -top-32 -right-32 opacity-30"></div>
+                    <div class="blob-2 -bottom-20 -left-20 opacity-25"></div>
+                    <div class="grid-pattern opacity-40"></div>
+                    <div class="absolute bottom-8 right-8 w-32 h-32 opacity-10 pointer-events-none">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <path d="M 50 60 L 90 60 L 90 100 Q 90 120 70 120 L 50 120 Z" fill="#1a5f5f" stroke="#1a5f5f" stroke-width="2"/>
+                            <path d="M 110 60 L 150 60 Q 150 80 130 80 L 110 80 L 110 140 L 130 140 Q 150 140 150 120" fill="#1a5f5f" stroke="#1a5f5f" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center justify-center gap-8 w-full max-w-2xl">
+                        <div class="text-center">
+                            <div class="text-7xl font-black mb-6">🎯</div>
+                            <h2 class="text-5xl font-bold mb-8 tracking-tight">Después: El Proceso</h2>
+                            <p class="text-2xl leading-relaxed">Refiné con ChatGPT. Generé con B-0. Y creé mi primer landing page sin tocar código.</p>
+                        </div>
+                        <div class="grid grid-cols-3 gap-3 w-full">
+                            <div class="bg-gradient-to-br from-orange-50 to-orange-100/50 p-4 rounded-xl text-center">
+                                <span class="text-xs text-orange-600 font-bold block">Google IA</span>
+                                <div class="h-1 w-full bg-orange-400 rounded mt-2"></div>
+                            </div>
+                            <div class="bg-gradient-to-br from-purple-50 to-purple-100/50 p-4 rounded-xl text-center">
+                                <span class="text-xs text-purple-600 font-bold block">ChatGPT</span>
+                                <div class="h-1 w-full bg-purple-400 rounded mt-2"></div>
+                            </div>
+                            <div class="bg-gradient-to-br from-green-50 to-green-100/50 p-4 rounded-xl text-center">
+                                <span class="text-xs text-green-600 font-bold block">B-0</span>
+                                <div class="h-1 w-full bg-green-400 rounded mt-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 5 -->
+                <div class="slide relative bg-gradient-to-br from-[#1a5f5f] via-[#2d7a7a] to-[#0f4d4d] text-[#FFFFFF] flex flex-col items-center justify-center p-20 shadow-2xl rounded-3xl overflow-hidden">
+                    <div class="blob-2 -top-40 -left-40 opacity-20"></div>
+                    <div class="blob-1 -bottom-32 -right-32 opacity-15"></div>
+                    <div class="grid-pattern opacity-20"></div>
+                    <div class="absolute bottom-8 right-8 w-32 h-32 opacity-10 pointer-events-none">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <path d="M 50 60 L 90 60 L 90 100 Q 90 120 70 120 L 50 120 Z" fill="#7DD3C0" stroke="#7DD3C0" stroke-width="2"/>
+                            <path d="M 110 60 L 150 60 Q 150 80 130 80 L 110 80 L 110 140 L 130 140 Q 150 140 150 120" fill="#7DD3C0" stroke="#7DD3C0" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center justify-center gap-8 w-full max-w-2xl">
+                        <div class="text-center">
+                            <div class="text-7xl font-black mb-6">🚀</div>
+                            <h2 class="text-5xl font-bold mb-8 tracking-tight">Finalmente: Gané</h2>
+                            <p class="text-2xl text-[#C5E8E3] leading-relaxed">Mi primer cliente. $1000. Todo en 30 minutos. Sin programar.</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl w-full">
+                            <p class="mono text-sm text-[#BEF264] font-semibold text-center">→ Y ahora tú también puedes hacerlo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 6 -->
+                <div class="slide relative bg-gradient-to-br from-[#F8FFFE] to-[#E8F5F2] text-[#1a5f5f] flex flex-col items-center justify-center p-20 shadow-2xl rounded-3xl overflow-hidden">
+                    <div class="blob-1 -top-40 -left-40 opacity-25"></div>
+                    <div class="blob-2 -bottom-20 -right-20 opacity-30"></div>
+                    <div class="grid-pattern opacity-40"></div>
+                    <div class="absolute bottom-8 right-8 w-32 h-32 opacity-10 pointer-events-none">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <path d="M 50 60 L 90 60 L 90 100 Q 90 120 70 120 L 50 120 Z" fill="#1a5f5f" stroke="#1a5f5f" stroke-width="2"/>
+                            <path d="M 110 60 L 150 60 Q 150 80 130 80 L 110 80 L 110 140 L 130 140 Q 150 140 150 120" fill="#1a5f5f" stroke="#1a5f5f" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center justify-center gap-8 w-full max-w-2xl">
+                        <div class="text-center">
+                            <div class="text-7xl font-black mb-6">💰</div>
+                            <h2 class="text-5xl font-bold mb-8 tracking-tight">Mi Transformación</h2>
+                            <p class="text-2xl leading-relaxed">Pasé de "sin idea" a ganar $1000 en un fin de semana. Tú también puedes.</p>
+                        </div>
+                        <div class="flex flex-col items-center gap-4 w-full">
+                            <div class="w-full flex items-center gap-3">
+                                <span class="text-xs text-[#7DD3C0] font-semibold">ANTES</span>
+                                <div class="flex-1 h-1 bg-red-400/30 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-red-400 via-yellow-400 to-green-400"></div>
+                                </div>
+                                <span class="text-xs text-green-600 font-semibold">DESPUÉS</span>
+                            </div>
+                            <span class="mono text-[#7DD3C0] font-semibold text-sm">📈 De $0 a $1000 en 30 minutos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 7: CTA -->
+                <div class="slide relative bg-gradient-to-br from-[#0D9488] via-[#1a5f5f] to-[#0f3d3d] text-white flex flex-col items-center justify-center p-20 shadow-2xl rounded-3xl overflow-hidden">
+                    <div class="blob-1 -right-40 -top-40 opacity-25"></div>
+                    <div class="blob-2 -left-32 -bottom-20 opacity-20"></div>
+                    <div class="grid-pattern opacity-15"></div>
+
+                    <div class="relative z-10 flex flex-col items-center justify-center gap-6 w-full max-w-2xl">
+                        <div class="flex justify-center">
+                            <div class="bg-white/10 backdrop-blur-md p-4 rounded-full border border-[#7DD3C0]/30">
+                                <iconify-icon icon="lucide:star" class="text-5xl text-[#BEF264]"></iconify-icon>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <h2 class="text-6xl font-bold mb-6 leading-tight">Yo lo hice. Tú también.</h2>
+                            <p class="text-2xl font-light opacity-90 mb-4">Mi paso a paso exacto para descubrir la fórmula de crear landing pages sin código.</p>
+                        </div>
+
+                        <div class="space-y-4 w-full">
+                            <a href="#" class="group flex items-center justify-center gap-3 bg-gradient-to-r from-[#BEF264] to-[#A8E063] text-[#064E3B] px-8 py-6 rounded-2xl font-bold text-2xl hover:scale-[1.05] w-full">
+                                <span>APRENDER</span>
+                                <iconify-icon icon="lucide:arrow-right" class="text-2xl"></iconify-icon>
+                            </a>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-white/10 backdrop-blur-md hover:bg-white/20 p-4 rounded-xl flex flex-col items-center justify-center gap-2 cursor-pointer">
+                                    <iconify-icon icon="lucide:heart" class="text-xl"></iconify-icon>
+                                    <span class="text-xs font-medium">Me gustó</span>
+                                </div>
+                                <div class="bg-white/10 backdrop-blur-md hover:bg-white/20 p-4 rounded-xl flex flex-col items-center justify-center gap-2 cursor-pointer">
+                                    <iconify-icon icon="lucide:bookmark" class="text-xl"></iconify-icon>
+                                    <span class="text-xs font-medium">Guarda</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-white/20 flex justify-between items-center text-xs w-full">
+                            <span class="font-semibold text-base">@johnjairo.ai</span>
+                            <span class="mono opacity-50 uppercase">Mi Historia #03</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
